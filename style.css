@@ -51,12 +51,14 @@ main{
     background-color: rgb(0, 187, 255);
     color: white;
     border: 0px;
+    padding: 1px 11px 1px 11px;
 }
 
 
 .tasks{
     border-radius: 0 0 5px 5px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
+    margin-bottom: 10px;
 }
 .tasks, .control-bar{
     padding-left: 80px;
@@ -75,11 +77,14 @@ ul{
 .arrow{
     vertical-align: middle;
 }
-
-.tasks .task{
-    margin-top: 10px;
+.tasks > ul > li {
+    padding-top: 40px;
 }
-.tasks .check{
+.task{
+    margin-top: 20px;
+    height: 40px;
+}
+.check{
     width: 30px;
     height: 30px;
     font-size: 20px;
@@ -87,18 +92,18 @@ ul{
     border-radius: 50%;
     border: 1px solid black;
 }
-.tasks .check.done{
+.check.done{
     color: greenyellow;
     border-color: greenyellow;
 }
-.tasks .check.done::before{
+.check.done::before{
     content: "\2714";
 }
-.tasks .check.todo{
+.check.todo{
     color: red;
     border-color: red;
 }
-.tasks .check.todo::before{
+.check.todo::before{
     content: "\2716";
 }
 .check, .name, .type{
@@ -114,9 +119,48 @@ ul{
     font-size: 15px;
     border-radius: 15px;
 }
+
 .type.editorial{
     background-color: rgb(0, 170, 255);
 }
 .type.editorial::before{
     content: "Editorial";
+}
+
+
+.type.recruiting{
+    background-color: rgb(97, 151, 105);
+}
+.type.recruiting::before{
+    content: "Recruiting";
+}
+
+
+.type.mobile{
+    background-color: rgb(230, 154, 48);
+}
+.type.mobile::before{
+    content: "Mobile";
+}
+
+.type.goals{
+    background-color: rgb(133, 22, 176);
+}
+.type.goals::before{
+    content: "Q1 Goals";
+}
+
+.type.sales{
+    background-color: rgb(127, 255, 104);
+}
+.type.sales::before{
+    content: "Sales";
+}
+
+.type.website{
+    background-color: rgb(252, 105, 242);
+}
+.type.website::before{
+    content: "Website";
+
 }

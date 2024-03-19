@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 
 body{
@@ -21,7 +22,6 @@ header > img{
 header > h1{
     display: inline-block;    
     vertical-align: middle;
-    font-family: sans-serif;
     font-size: 50px;
 }
 
@@ -34,7 +34,7 @@ main{
 }
 
 .control-bar{
-    padding: 20px 0px 20px 80px ;
+    padding: 20px 0px 20px 0px ;
     border-radius: 5px 5px 0 0;
     margin-bottom: 2px;
 }
@@ -51,4 +51,72 @@ main{
     background-color: rgb(0, 187, 255);
     color: white;
     border: 0px;
+}
+
+
+.tasks{
+    border-radius: 0 0 5px 5px;
+    padding-bottom: 20px;
+}
+.tasks, .control-bar{
+    padding-left: 80px;
+}
+ul{
+    list-style-type:none;
+}
+.arrow, .title, .check, .name, .type{
+    display: inline-block;
+}
+.title{
+    font-size: 40px;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+.arrow{
+    vertical-align: middle;
+}
+
+.tasks .task{
+    margin-top: 10px;
+}
+.tasks .check{
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;    
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.tasks .check.done{
+    color: greenyellow;
+    border-color: greenyellow;
+}
+.tasks .check.done::before{
+    content: "\2714";
+}
+.tasks .check.todo{
+    color: red;
+    border-color: red;
+}
+.tasks .check.todo::before{
+    content: "\2716";
+}
+.check, .name, .type{
+    vertical-align: middle;
+}
+.name{
+    font-size: 30px;
+    margin-left: 10px;
+}
+.type{
+    color: white;
+    padding: 8px 15px;
+    font-size: 15px;
+    border-radius: 15px;
+}
+.type.editorial{
+    background-color: rgb(0, 170, 255);
+}
+.type.editorial::before{
+    content: "Editorial";
 }
